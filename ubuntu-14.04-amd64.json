@@ -50,6 +50,11 @@
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "{{user `ssh_pub_key`}}",
+      "destination": "/tmp/pub_key"
+    },
+    {
       "destination": "/tmp/bento-metadata.json",
       "source": "{{user `metadata`}}",
       "type": "file"
