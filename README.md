@@ -5,7 +5,7 @@ This repository contains Packer templates for creating OVF/OVA files to be used 
 
 Build the Packer template:
 ```
-packer build ubuntu-14.04-amd64.json
+packer build -var 'ssh_pub_key=/path/to/ssh_key.pub' ubuntu-14.04-amd64.json
 ```
 
 After a successful build create an OVF/OVA file:
